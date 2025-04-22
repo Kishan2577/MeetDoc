@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#E8E8E8"
+        android:pathData="M40,40m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Doctor silhouette -->
+    <path
+        android:fillColor="#555555"
+        android:pathData="M40,15 C33,15 28,22 28,30 C28,38 33,42 40,42 C47,42 52,38 52,30 C52,22 47,15 40,15 Z"/>
+    
+    <!-- Lab coat -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,40 L25,70 L55,70 L55,40 C48,50 32,50 25,40 Z"/>
+    
+    <!-- Stethoscope -->
+    <path
+        android:fillColor="#555555"
+        android:strokeColor="#555555"
+        android:strokeWidth="2"
+        android:pathData="M35,50 C35,55 40,60 45,55"/>
+</vector>

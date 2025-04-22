@@ -1,0 +1,52 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration
+local.properties
+.idea/
+*.iml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Caches
+.cache/
+.cxx/
+.externalNativeBuild/
+captures/
+output.json
+
+# Google Services (generated or sensitive)
+google-services.json
+app/google-services.json
+
+# Android Studio navigation editor
+.navigation/
+
+# Crashlytics / Firebase
+crashlytics-build.properties
+fabric.properties
+
+# IntelliJ
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Others
+*.apk
+*.ap_
+
+# NDK
+obj/
