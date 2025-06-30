@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setSelectedTab(chat, chatIcon, chatText);
-                loadFragment(new Schedule());
+                loadFragment(new BookSlot());
             }
         });
 

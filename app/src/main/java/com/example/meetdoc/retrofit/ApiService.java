@@ -39,4 +39,13 @@ public interface ApiService {
     @POST("api/v1/createAppointment")
     Call<JsonObject> selectAppointment(@Header("Authorization") String token, @Body JsonObject request);
 
+    @POST("api/v1/get-patient")
+    Call<JsonObject> getPatient(@Header("Authorization") String token, @Body JsonObject request);
+
+    @POST("api/v1/doctorRegister")
+    Call<JsonObject> sendDoctorData(@Body JsonObject request);
+
+    @POST("api/v1/patientRegister")
+    Call<JsonObject> sendPatientData(@Body JsonObject request);
+
 }

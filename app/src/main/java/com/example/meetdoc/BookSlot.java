@@ -4,9 +4,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +27,8 @@ public class BookSlot extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private WebView webView;
 
     public BookSlot() {
         // Required empty public constructor
@@ -58,7 +64,17 @@ public class BookSlot extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_slot, container, false);
+        View view = inflater.inflate(R.layout.fragment_book_slot, container, false);
+
+        webView = view.findViewById(R.id.webView);
+        WebSettings webSettings = webView.getSettings();
+        Log.e("CHAT","HERE 0");
+        webSettings.setJavaScriptEnabled(true);
+        Log.e("CHAT","HERE 1");
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://137b9845018546e9a54762fea31ba758.elf.site");
+
+        return view;
     }
+
 }

@@ -6,9 +6,159 @@
     tools:context=".Schedule">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#F3F9FF"
+        tools:context=".Schedule">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="24dp">
+
+            <!-- Profile Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="John Doe"
+                    android:textColor="#00BCD4"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="16dp"
+                android:background="#BBDEFB" />
+
+            <!-- Info Fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Email -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ProfileValue"
+                    android:text="john@example.com" />
+
+                <!-- Address -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ProfileLabel"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ProfileValue"
+                    android:text="123 Main Street, NY" />
+
+                <!-- Age -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ProfileValue"
+                    android:text="28" />
+
+                <!-- Gender -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ProfileValue"
+                    android:text="Male" />
+
+                <!-- Occupation -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Occupation" />
+
+                <TextView
+                    android:id="@+id/occupation"
+                    style="@style/ProfileValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Software Engineer" />
+
+                <!-- Marital Status -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marital Status" />
+
+                <TextView
+                    android:id="@+id/maritalStatus"
+                    style="@style/ProfileValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Single" />
+
+                <!-- Contact Number -->
+                <TextView
+                    style="@style/ProfileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number" />
+
+                <TextView
+                    android:id="@+id/contactNumber"
+                    style="@style/ProfileValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 9876543210" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

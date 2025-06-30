@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -46,6 +47,8 @@ public class Home extends Fragment {
     private Button btnGetStarted;
 
     private CircleImageView imgDoctor;
+
+    private ImageView btncardiology,btndental,btnpediatric,btneyespecialist;
 
     public Home() {
         // Required empty public constructor
@@ -88,6 +91,10 @@ public class Home extends Fragment {
         btnGetStarted = view.findViewById(R.id.btnGetStarted);
         imgDoctor = view.findViewById(R.id.imgDoctor);
         seeAll = view.findViewById(R.id.seeAll);
+        btncardiology = view.findViewById(R.id.Cardiologist);
+        btndental = view.findViewById(R.id.Dental);
+        btnpediatric = view.findViewById(R.id.Pediatric);
+        btneyespecialist = view.findViewById(R.id.Eye_Specialist);
         adapter = new DoctorAdapter(); // Initialize before observing
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
@@ -112,17 +119,57 @@ public class Home extends Fragment {
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), AllDoctorActivity.class));
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "all");
+                startActivity(intent);
             }
         });
 
         seeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),AllDoctorActivity.class));
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "all");
+                startActivity(intent);
             }
         });
 
+        btncardiology.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "Cardiologist");
+                startActivity(intent);
+            }
+        });
+
+        btndental.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "Dental");
+                startActivity(intent);
+            }
+        });
+
+
+        btnpediatric.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "Pediatrician");
+                startActivity(intent);
+            }
+        });
+
+        btneyespecialist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllDoctorActivity.class);
+                intent.putExtra("speciality", "Eye Specialist");
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

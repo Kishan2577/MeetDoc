@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,16 +18,22 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
+import com.example.meetdoc.ConversationActivity;
 import com.example.meetdoc.R;
+import com.example.meetdoc.helper.CometChatHelper;
 import com.example.meetdoc.viewmodel.DoctorByIdViewModel;
 import com.example.meetdoc.viewmodel.DoctorViewModel;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainDoctor extends AppCompatActivity {
     DoctorByIdViewModel doctorByIdViewModel;
     ImageView docImg;
 
     MaterialButton btnBookAppointment;
+    ImageButton btnBack;
+
+    FloatingActionButton fabChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +52,9 @@ public class MainDoctor extends AppCompatActivity {
         TextView tvExperience = findViewById(R.id.ExperienceNo);
         TextView tvReviews = findViewById(R.id.ReviewsNo);
         TextView tvAboutMeContent = findViewById(R.id.tvAboutMeContent);
+        btnBack = findViewById(R.id.btnBack);
         docImg = findViewById(R.id.docImg);
+        fabChat = findViewById(R.id.fabChat);
         btnBookAppointment = findViewById(R.id.btnBookAppointment);
 
         doctorByIdViewModel = new ViewModelProvider(this).get(DoctorByIdViewModel.class);
@@ -68,6 +78,8 @@ public class MainDoctor extends AppCompatActivity {
                         .error(R.drawable.doctor_banner) // optional fallback
                         .into(docImg);
 
+
+
             }
             else
             {
@@ -82,5 +94,20 @@ public class MainDoctor extends AppCompatActivity {
                 startActivity(new Intent(MainDoctor.this,CreateSlots.class));
             }
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainDoctor.this,DoctorRegister.class));
+            }
+        });
+
+        fabChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainDoctor.this, ConversationActivity.class));
+            }
+        });
+
     }
 }

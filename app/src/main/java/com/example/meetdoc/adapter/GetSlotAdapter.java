@@ -34,7 +34,7 @@ public class GetSlotAdapter extends RecyclerView.Adapter<GetSlotAdapter.Appointm
     @Override
     public AppointmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_appointment, parent, false);
+                    .inflate(R.layout.item_appointment, parent, false);
         return new AppointmentViewHolder(view);
     }
 

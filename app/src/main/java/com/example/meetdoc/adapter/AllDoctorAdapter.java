@@ -17,15 +17,31 @@ import com.example.meetdoc.BookAppointmentActivity;
 import com.example.meetdoc.models.Doctor;
 import com.example.meetdoc.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllDoctorAdapter extends RecyclerView.Adapter<AllDoctorAdapter.DoctorViewHolder> {
     private List<Doctor> doctorList;
+    private String speciality;
+    public AllDoctorAdapter(String speciality) {
+        this.speciality = speciality;
+    }
 
     public void setDoctorList(List<Doctor> doctors) {
-        this.doctorList = doctors;
+        if (speciality.equalsIgnoreCase("all")) {
+            this.doctorList = doctors;
+        } else {
+            // Filter based on specialization
+            this.doctorList = new ArrayList<>();
+            for (Doctor doctor : doctors) {
+                if (doctor.getSpecialization().equalsIgnoreCase(speciality)) {
+                    this.doctorList.add(doctor);
+                }
+            }
+        }
         notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override

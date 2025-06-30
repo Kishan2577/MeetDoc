@@ -12,4 +12,25 @@
     <color name="gray_light">#BDBDBD</color>
     <color name="yellow">#FFC107</color>
     <color name="background">#F5F5F5</color>
+
+    <!-- Primary Colors -->
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_blue_dark">#1976D2</color>
+    <color name="primary_blue_light">#BBDEFB</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F8F9FA</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Rating Colors -->
+    <color name="rating_gold">#FFD700</color>
+    <color name="rating_gray">#E0E0E0</color>
+
+    <!-- Status Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="error_red">#F44336</color>
 </resources>

@@ -95,7 +95,7 @@
 
                     <!-- Favorite Button -->
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fabFavorite"
+                        android:id="@+id/fabChat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -107,7 +107,7 @@
                         app:fabSize="mini"
                         app:layout_constraintEnd_toEndOf="@id/docImg"
                         app:layout_constraintTop_toTopOf="@id/docImg"
-                        app:srcCompat="@drawable/ic_favorite_border"
+                        app:srcCompat="@drawable/ic_message"
                         app:tint="@color/blue" />
 
                     <!-- Doctor Name -->

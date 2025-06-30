@@ -208,6 +208,7 @@
                         app:cardElevation="0dp">
 
                         <ImageView
+                            android:id="@+id/Cardiologist"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -241,6 +242,7 @@
                         app:cardElevation="0dp">
 
                         <ImageView
+                            android:id="@+id/Dental"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -274,6 +276,7 @@
                         app:cardElevation="0dp">
 
                         <ImageView
+                            android:id="@+id/Pediatric"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
@@ -307,10 +310,11 @@
                         app:cardElevation="0dp">
 
                         <ImageView
+                            android:id="@+id/Eye_Specialist"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
-                            android:contentDescription="Eye Specialist"
+                            android:contentDescription="Eye-Specialist"
                             android:src="@drawable/ic_eye_specialist"
                             app:tint="#00BCD4" />
                     </androidx.cardview.widget.CardView>

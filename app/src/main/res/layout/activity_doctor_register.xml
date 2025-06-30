@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true"
+    tools:context=".doctor.DoctorRegister">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="24dp">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Doctor Registration"
+          android:textSize="28sp"
+          android:textStyle="bold"
+          android:textColor="@color/text_primary"
+          android:layout_marginBottom="8dp" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Join our medical community"
+          android:textSize="16sp"
+          android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Profile Image Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/iv_profile"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:src="@drawable/doctor_banner"
+          app:civ_border_width="3dp"
+          app:civ_border_color="@color/primary_blue"
+          android:layout_marginBottom="12dp" />
+
+      <Button
+          android:id="@+id/tv_upload_photo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Upload Profile Photo"
+          android:textColor="@color/primary_blue"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          android:padding="8dp"
+          android:background="?android:attr/selectableItemBackground"
+          android:clickable="true"
+          android:focusable="true" />
+
+    </LinearLayout>
+
+    <!-- Personal Information Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@android:color/white">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Full Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_full_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Full Name"
+              android:inputType="textPersonName"
+              android:drawableStart="@drawable/ic_profile"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_email"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Email Address"
+              android:inputType="textEmailAddress"
+              android:drawableStart="@drawable/ic_message"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_password"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Password"
+              android:drawableStart="@drawable/ic_lock"
+              android:inputType="textPassword"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_phone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Phone Number"
+              android:inputType="phone"
+              android:drawableStart="@drawable/ic_voice_call"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Medical Information Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@android:color/white">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medical Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Medical Registration Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_medical_reg_number"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Medical Registration Number"
+              android:inputType="textCapCharacters"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- State Spinner -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/spinner_state"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Select State"
+              android:inputType="none"
+              android:drawableStart="@drawable/ic_location"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Specialization -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_specialization"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Specialization"
+              android:inputType="textCapWords"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Medical College -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_medical_college"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Medical College"
+              android:inputType="textCapWords"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Year of Registration -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_year_registration"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Year of Registration"
+              android:inputType="number"
+              android:drawableStart="@drawable/ic_calendar"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Professional Information Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@android:color/white">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Professional Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Hospital Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_hospital_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Hospital Name"
+              android:inputType="textCapWords"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Years of Experience -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_years_experience"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Years of Experience"
+              android:inputType="number"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Patients Checked -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_patients_checked"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Total Patients Checked"
+              android:inputType="number"
+              android:drawableStart="@drawable/ic_patients"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- About -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="@color/primary_blue"
+            app:hintTextColor="@color/primary_blue"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/et_about"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="About Yourself"
+              android:inputType="textMultiLine"
+              android:lines="4"
+              android:maxLines="6"
+              android:gravity="top"
+              android:drawablePadding="12dp"
+              app:drawableTint="@color/primary_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Register Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Register"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary_blue"
+        app:cornerRadius="28dp"
+        app:elevation="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white" />
+
+    <!-- Login Link -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Already have an account? "
+          android:textColor="@color/text_secondary"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/tv_login"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Login"
+          android:textColor="@color/primary_blue"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          android:padding="4dp"
+          android:background="?android:attr/selectableItemBackground"
+          android:clickable="true"
+          android:focusable="true" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  </ScrollView>

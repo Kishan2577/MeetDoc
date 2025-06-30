@@ -21,7 +21,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
     String doctorId, doctorImg, doctorSpecs, doctorExp, doctorChecked, doctorRating, doctorHospital, doctorAbout,doctorName;
     CircleImageView imgDoctor;
     TextView tvDoctorName,tvSpecialty,tvHospital,tvPatients,tvExperience,tvReviews,tvBio;
-    Button btnBookAppointment;
+    Button btnBookAppointment,btnMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         tvReviews = findViewById(R.id.tvReviews);
         tvBio = findViewById(R.id.tvBio);
         btnBookAppointment = findViewById(R.id.btnBookAppointment);
-
+        btnMessage = findViewById(R.id.btnMessage);
 
         Intent intent = getIntent();
         doctorName = intent.getStringExtra("doctor_name");
@@ -82,6 +82,15 @@ public class BookAppointmentActivity extends AppCompatActivity {
                 intent.putExtra("doctor_hospital", doctorHospital);  // assuming get_id() returns the ID
                 intent.putExtra("doctor_about", doctorAbout);  // assuming get_id() returns the ID
                 intent.putExtra("doctor_name", doctorName);
+                startActivity(intent);
+            }
+        });
+
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookAppointmentActivity.this,ChatActivity.class);
+                intent.putExtra("uid",doctorId);
                 startActivity(intent);
             }
         });
