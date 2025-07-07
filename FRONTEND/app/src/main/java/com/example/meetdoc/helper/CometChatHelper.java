@@ -13,9 +13,9 @@ import com.cometchat.chatuikit.shared.cometchatuikit.UIKitSettings;
 public class CometChatHelper {
 
     private static final String TAG = "CometChatHelper";
-    private static final String appID = "AppID"; // Your App ID
-    private static final String region = "REGIN"; // Your Region
-    private static final String authKey = "AUTHKEY"; // Your Auth Key
+    private static final String appID = "2781057683e012f4"; // Your App ID
+    private static final String region = "IN"; // Your Region
+    private static final String authKey = "8f2b620962a4945961fa261eeb0594f8219bfa8b"; // Your Auth Key
 
     public static void initCometChat(Context context) {
         UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder()
@@ -28,13 +28,12 @@ public class CometChatHelper {
         CometChatUIKit.init(context, uiKitSettings, new CometChat.CallbackListener<String>() {
             @Override
             public void onSuccess(String success) {
-                Toast.makeText(context, "INITIALIZATION SUCCESSFULLY", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "Initialization successful");
             }
 
             @Override
             public void onError(CometChatException e) {
-                Toast.makeText(context, "INITIALIZATION FAILED", Toast.LENGTH_SHORT).show();
                 Log.e(TAG, "Initialization failed: " + (e != null ? e.getMessage() : "Unknown error"));
             }
         });

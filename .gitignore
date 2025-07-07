@@ -50,3 +50,79 @@ fabric.properties
 
 # NDK
 obj/
+
+
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment files
+.env
+.env.*  # Covers .env.local, .env.production, etc.
+
+# Next.js build output
+.next/
+
+# Parcel cache
+.cache/
+
+# Binaries
+*.exe
+*.out
+*.app
+
+# Build directory
+dist/
+build/
+
+# IDE/Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# PM2 logs and dumps
+.pnpm-debug.log
+dump.rdb
+*.log
+
+# Misc
+*.tgz
