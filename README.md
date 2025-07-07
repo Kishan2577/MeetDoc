@@ -52,6 +52,16 @@ Whether you're booking a routine checkup, viewing a doctor's profile, or keeping
 
 ---
 
+
+## 📸 Screenshots
+
+<!-- Add your images in the `assets` folder or upload them via GitHub and use the URLs here -->
+![Home Screen](assets/home_screen.png)
+![Doctor List](assets/doctor_list.png)
+![Appointment Booking](assets/appointment_booking.png)
+
+---
+
 ## 🧪 How to Run the Project
 
 ### Prerequisites:
