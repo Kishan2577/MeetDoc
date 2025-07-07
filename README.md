@@ -53,12 +53,27 @@ Whether you're booking a routine checkup, viewing a doctor's profile, or keeping
 ---
 
 
-## 📸 Screenshots
+## 📱 Screenshots
 
-<!-- Add your images in the `assets` folder or upload them via GitHub and use the URLs here -->
-![Home Screen](assets/home_screen.png)
-![Doctor List](assets/doctor_list.png)
-![Appointment Booking](assets/appointment_booking.png)
+<table>
+  <tr>
+    <td><img src="ScreenShots/IMG-20250707-WA0008.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0011.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0013.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0009.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0012.jpg" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="ScreenShots/IMG-20250707-WA0014.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0005.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0006.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0010.jpg" width="200"/></td>
+    <td><img src="ScreenShots/IMG-20250707-WA0007.jpg" width="200"/></td>
+  </tr>
+</table>
+
+
+
 
 ---
 
