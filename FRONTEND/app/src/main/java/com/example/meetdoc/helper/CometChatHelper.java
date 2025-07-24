@@ -13,9 +13,9 @@ import com.cometchat.chatuikit.shared.cometchatuikit.UIKitSettings;
 public class CometChatHelper {
 
     private static final String TAG = "CometChatHelper";
-    private static final String appID = "2781057683e012f4"; // Your App ID
-    private static final String region = "IN"; // Your Region
-    private static final String authKey = "8f2b620962a4945961fa261eeb0594f8219bfa8b"; // Your Auth Key
+    private static final String appID = "APPID"; // Your App ID
+    private static final String region = "APPREGION"; // Your Region
+    private static final String authKey = "APIKEY"; // Your Auth Key
 
     public static void initCometChat(Context context) {
         UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder()
