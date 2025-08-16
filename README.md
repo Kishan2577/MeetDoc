@@ -34,7 +34,7 @@ Whether you're booking a routine checkup, viewing a doctor's profile, or keeping
 - **Networking**: Retrofit / OkHttp
 - **Image Uploading**: Multipart requests with image compression
 
-### 🌐 Backend (Optional / Future Scope)
+### 🌐 Backend
 - **Server**: Node.js + Express.js
 - **Database**: MongoDB (via Mongoose)
 - **Authentication**: JSON Web token
@@ -42,7 +42,7 @@ Whether you're booking a routine checkup, viewing a doctor's profile, or keeping
 
 ---
 
-## 🔒 User Roles (If Implemented)
+## 🔒 User Roles 
 
 | Role | Access |
 |------|--------|
