@@ -72,7 +72,7 @@ public class BookSlot extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         Log.e("CHAT","HERE 1");
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("URL FOR CHAT");
+        webView.loadUrl("KEY URL");
 
         return view;
     }
